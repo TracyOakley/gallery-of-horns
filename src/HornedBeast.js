@@ -2,6 +2,7 @@ import React from "react";
 //import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+
 class HornedBeast extends React.Component{
   constructor(props){
     super(props);
@@ -11,6 +12,7 @@ class HornedBeast extends React.Component{
   }
 
   handleClick = () => {
+    this.props.showModal(this.props.image_url,this.props.description);
     this.setState({
       likes: this.state.likes + 1
     });
