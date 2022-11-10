@@ -1,5 +1,15 @@
 # Gallery of Horns - Code Fellows 301 Week 1
 
+## Time Estimates for Lab 3
+
+### Number and name of feature: Feature #1: Display a Modal
+
+Estimate of time needed to complete: 1.5 hours
+Start time: 2:30
+Finish time: 3:30
+Actual time needed to complete: 1 hour
+
+
 ## Time Estimates for Lab 2
 
 ### Number and name of feature: Feature #1: Display images
