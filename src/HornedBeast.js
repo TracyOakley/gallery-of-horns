@@ -1,6 +1,7 @@
 import React from "react";
 //import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 
 class HornedBeast extends React.Component{
@@ -29,7 +30,7 @@ class HornedBeast extends React.Component{
 */
 
     return(
-      <>
+    <Col>
       <Card style={{ width: '18rem' }}>
       <Card.Img onClick = {this.handleClick} variant="top" src={this.props.image_url} />
       <Card.Body>
@@ -52,7 +53,7 @@ class HornedBeast extends React.Component{
       <p>{this.props.description} </p>
       <p>❤️ {this.state.likes}</p>
        */}
-      </>
+      </Col>
     );
   }
 }
