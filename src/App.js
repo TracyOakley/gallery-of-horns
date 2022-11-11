@@ -1,11 +1,11 @@
-
 import './App.css';
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import SelectedBeast from './SelectedBeast';
-import data from "./data.json";
+import SelectHorns from './SelectHorns';
+
 
 
 class App extends React.Component{
@@ -14,8 +14,20 @@ class App extends React.Component{
     this.state = {
       isModalShowing: false,
       modalImage: '',
-      modalDescription: ''
+      modalDescription: '',
+      hornsToDisplay: ''
     };
+  }
+
+  handleNumofHorns = (numOfHorns) => {
+    this.setState({
+      isModalShowing: this.state.isModalShowing,
+      modalImage: this.state.modalImage,
+      modalDescription: this.state.modalDescription,
+      hornsToDisplay: numOfHorns
+    });
+    console.log(numOfHorns);
+
   }
 
   showModal = (image, description) => {
@@ -37,13 +49,21 @@ class App extends React.Component{
       <>
       <Header />
 
+      <SelectHorns 
+      handleNumofHorns={this.handleNumofHorns}
+      />
+
       <SelectedBeast 
       isModalShowing={this.state.isModalShowing} 
       hideModal={this.hideModal} 
       modalImage={this.state.modalImage} modalDescription={this.state.modalDescription}
       />
 
-      <Main data={data} showModal={this.showModal}/>
+      <Main 
+      //data={data} 
+      showModal={this.showModal}
+      hornsToDisplay={this.state.hornsToDisplay}
+      />
       <Footer />
       </>
     );
